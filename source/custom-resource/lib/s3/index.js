@@ -107,6 +107,66 @@
                                  }]
                              }
                          }
+                     },
+                     {
+                         Events: ['s3:ObjectCreated:*'],
+                         LambdaFunctionArn: lambdaArn,
+                         Filter: {
+                             Key: {
+                                 FilterRules: [{
+                                     Name: 'suffix',
+                                     Value: '.wma'
+                                 }]
+                             }
+                         }
+                     },
+                     {
+                         Events: ['s3:ObjectCreated:*'],
+                         LambdaFunctionArn: lambdaArn,
+                         Filter: {
+                             Key: {
+                                 FilterRules: [{
+                                     Name: 'suffix',
+                                     Value: '.wav'
+                                 }]
+                             }
+                         }
+                     },
+                     {
+                         Events: ['s3:ObjectCreated:*'],
+                         LambdaFunctionArn: lambdaArn,
+                         Filter: {
+                             Key: {
+                                 FilterRules: [{
+                                     Name: 'suffix',
+                                     Value: '.aac'
+                                 }]
+                             }
+                         }
+                     },
+                     {
+                         Events: ['s3:ObjectCreated:*'],
+                         LambdaFunctionArn: lambdaArn,
+                         Filter: {
+                             Key: {
+                                 FilterRules: [{
+                                     Name: 'suffix',
+                                     Value: '.mp3'
+                                 }]
+                             }
+                         }
+                     },
+                     {
+                         Events: ['s3:ObjectCreated:*'],
+                         LambdaFunctionArn: lambdaArn,
+                         Filter: {
+                             Key: {
+                                 FilterRules: [{
+                                     Name: 'suffix',
+                                     Value: '.ogg'
+                                 }]
+                             }
+                         }
                      }
                  ]
              }
