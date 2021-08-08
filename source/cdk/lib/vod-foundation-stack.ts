@@ -203,6 +203,7 @@ export class VodFoundation extends cdk.Stack {
                 MEDIACONVERT_ENDPOINT: customResourceEndpoint.getAttString('Endpoint'),
                 MEDIACONVERT_ROLE: mediaconvertRole.roleArn,
                 JOB_SETTINGS: 'job-settings.json',
+                JOB_SETTINGS_AUDIO: 'job-settings-audio.json',
                 DESTINATION_BUCKET: destination.bucketName,
                 SOLUTION_ID: 'SO0146',
                 STACKNAME: cdk.Aws.STACK_NAME,
