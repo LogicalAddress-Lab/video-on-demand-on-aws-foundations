@@ -20,6 +20,11 @@
              Key: 'assets01/job-settings.json'
          }).promise();
          await s3.putObject({
+            Body: fs.readFileSync('./lib/s3/job-settings-audio.json', 'utf8'),
+            Bucket: bucket,
+            Key: 'assets01/job-settings-audio.json'
+        }).promise();
+         await s3.putObject({
              Body:"{\n\"Jobs\": []\n}",
              Bucket: bucket,
              Key: 'jobs-manifest.json'

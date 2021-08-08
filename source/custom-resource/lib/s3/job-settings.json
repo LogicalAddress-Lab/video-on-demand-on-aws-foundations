@@ -3,6 +3,41 @@
   "Role": "",
   "Settings": {
     "OutputGroups": [
+        {
+        "Name": "File Group",
+        "OutputGroupSettings": {
+          "Type": "FILE_GROUP_SETTINGS",
+          "FileGroupSettings": {
+            "Destination": "s3://destinationbucket/guid/mp4/"
+          }
+        },
+        "Outputs": [
+          {
+            "VideoDescription": {
+              "ScalingBehavior": "DEFAULT",
+              "TimecodeInsertion": "DISABLED",
+              "AntiAlias": "ENABLED",
+              "Sharpness": 50,
+              "CodecSettings": {
+                "Codec": "FRAME_CAPTURE",
+                "FrameCaptureSettings": {
+                  "FramerateNumerator": 30,
+                  "FramerateDenominator": 500,
+                  "MaxCaptures": 3,
+                  "Quality": 80
+                }
+              },
+              "DropFrameTimecode": "ENABLED",
+              "ColorMetadata": "INSERT"
+            },
+            "ContainerSettings": {
+              "Container": "RAW"
+            },
+            "NameModifier": "ah_art"
+          }
+        ],
+        "CustomName": "THUMBNAILS"
+      },
       {
         "Name": "File Group",
         "Outputs": [
